@@ -82,6 +82,10 @@ header {
   object-fit: cover;
 }
 
+.imageHeader.mobile {
+  display: none;
+}
+
 .content {
   display: flex;
   width: 100%;
@@ -253,7 +257,9 @@ h3 {
 .logoFooter {
   fill: hsl(168, 34%, 41%);
 }
-
+.menuIcon {
+  display: none;
+}
 .naviFooter {
   display: flex;
   justify-content: space-between;
@@ -267,6 +273,9 @@ h3 {
 .navFooter:hover {
   color: white;
 }
+.close {
+  display: none;
+}
 .socialMedia {
   width: 124px;
   display: flex;
@@ -274,4 +283,47 @@ h3 {
 }
 .SMLogo:hover {
   fill: white;
+}
+@media screen and (max-width: 676px) {
+  .navHeader {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 50;
+    background-color: #6eceff;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    justify-content: center;
+  }
+
+  .contactButton {
+    margin: 0px;
+    background-color: transparent;
+    transform: translate(0px, -12px);
+  }
+
+  .navHeader a {
+    margin: 25px 0px 25px 0px;
+  }
+
+  .close {
+    position: fixed;
+    z-index: 51;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menuIcon {
+    display: inline;
+    cursor: pointer;
+  }
+
+  .presentation {
+    width: 400px;
+  }
 }
